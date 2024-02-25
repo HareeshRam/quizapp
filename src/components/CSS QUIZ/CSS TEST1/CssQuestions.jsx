@@ -1,0 +1,185 @@
+const questions = [
+    {
+      id: 1,
+      question: "What does CSS stand for?",
+      options: ["A. Cascading Style Sheet", "B. Creative Style Sheet", "C. Computer Style Sheet", "D. Colorful Style Sheet"],
+      answer: "A. Cascading Style Sheet",
+    },
+    {
+      id: 2,
+      question: "Which property is used to change the text color in CSS?",
+      options: ["A. font-color", "B. text-style", "C. color", "D. text-color"],
+      answer: "C. color",
+    },
+    {
+      id: 3,
+      question: "How can you include a CSS file in an HTML document?",
+      options: ["A. <style src='styles.css'>", "B. <link rel='stylesheet' href='styles.css'>", "C. <css href='styles.css'>", "D. <include css='styles.css'>"],
+      answer: "B. <link rel='stylesheet' href='styles.css'>",
+    },
+    {
+      id: 4,
+      question: "Which property is used for controlling the layout of elements in a document?",
+      options: ["A. font-family", "B. margin", "C. display", "D. padding"],
+      answer: "C. display",
+    },
+    {
+      id: 5,
+      question: "What is the purpose of the 'float' property in CSS?",
+      options: ["A. To set the font size", "B. To make text bold", "C. To clear the text", "D. To position elements"],
+      answer: "D. To position elements",
+    },
+    {
+      id: 6,
+      question: "Which CSS selector is used to select elements with a specific class?",
+      options: ["A. .element", "B. #element", "C. element.class", "D. element#class"],
+      answer: "A. .element",
+    },
+    {
+      id: 7,
+      question: "How do you apply the same styles to multiple elements with a single class?",
+      options: ["A. Use a unique class for each element", "B. Use the <same> keyword", "C. Separate class names with a comma", "D. Use the same class name"],
+      answer: "D. Use the same class name",
+    },
+    {
+      id: 8,
+      question: "Which property is used to add space between the border and content of an element?",
+      options: ["A. padding", "B. margin", "C. border-spacing", "D. spacing"],
+      answer: "A. padding",
+    },
+    {
+      id: 9,
+      question: "What is the default value of the 'position' property in CSS?",
+      options: ["A. relative", "B. static", "C. absolute", "D. fixed"],
+      answer: "B. static",
+    },
+    {
+      id: 10,
+      question: "Which CSS property is used to change the background color of an element?",
+      options: ["A. background-color", "B. color", "C. text-color", "D. bg-color"],
+      answer: "A. background-color",
+    },
+    {
+      id: 11,
+      question: "Which property is used to set the font for an element?",
+      options: ["A. font-style", "B. font-family", "C. font-size", "D. text-font"],
+      answer: "B. font-family",
+    },
+    {
+      id: 12,
+      question: "What does CSS specificity refer to?",
+      options: ["A. The order of CSS rules", "B. The importance of a CSS rule", "C. The uniqueness of a selector", "D. The size of the CSS file"],
+      answer: "C. The uniqueness of a selector",
+    },
+    {
+      id: 13,
+      question: "Which CSS property is used to add a shadow to an element's text?",
+      options: ["A. text-shadow", "B. box-shadow", "C. shadow", "D. font-shadow"],
+      answer: "A. text-shadow",
+    },
+    {
+      id: 14,
+      question: "What does the 'box-sizing' property control in CSS?",
+      options: ["A. The size of the text box", "B. The size of the font", "C. The size of the element's border box", "D. The size of the margin box"],
+      answer: "C. The size of the element's border box",
+    },
+    {
+      id: 15,
+      question: "How do you center-align text horizontally in CSS?",
+      options: ["A. text-align: center;", "B. align: center;", "C. horizontal-align: center;", "D. center-text: horizontal;"],
+      answer: "A. text-align: center;",
+    },
+    {
+      id: 16,
+      question: "Which CSS property is used to control the spacing between lines of text?",
+      options: ["A. line-spacing", "B. spacing", "C. line-height", "D. text-spacing"],
+      answer: "C. line-height",
+    },
+    {
+      id: 17,
+      question: "What is the purpose of the 'z-index' property in CSS?",
+      options: ["A. To control the size of an element", "B. To control the order of stacking elements", "C. To control the opacity of an element", "D. To control the font size"],
+      answer: "B. To control the order of stacking elements",
+    },
+    {
+      id: 18,
+      question: "Which CSS property is used to make text in a <div> element bold?",
+      options: ["A. font-weight", "B. text-weight", "C. bold-text", "D. text-bold"],
+      answer: "A. font-weight",
+    },
+    {
+      id: 19,
+      question: "Which CSS property is used to add a border to an element?",
+      options: ["A. border", "B. outline", "C. border-style", "D. border-width"],
+      answer: "A. border",
+    },
+    {
+      id: 20,
+      question: "What is the purpose of the 'opacity' property in CSS?",
+      options: ["A. To control the text size", "B. To control the visibility of an element", "C. To control the font style", "D. To control the color of an element"],
+      answer: "B. To control the visibility of an element",
+    },
+    {
+      id: 21,
+      question: "Which CSS property is used to create a 3D effect on an element?",
+      options: ["A. 3d-effect", "B. transform", "C. effect", "D. perspective"],
+      answer: "B. transform",
+    },
+    {
+      id: 22,
+      question: "What does the 'display: none;' property do in CSS?",
+      options: ["A. Hides the element", "B. Makes the element transparent", "C. Adds a border to the element", "D. Enlarges the element"],
+      answer: "A. Hides the element",
+    },
+    {
+      id: 23,
+      question: "Which property is used to control the space between the content and the border of an element?",
+      options: ["A. margin", "B. padding", "C. spacing", "D. border-spacing"],
+      answer: "B. padding",
+    },
+    {
+      id: 24,
+      question: "What is the purpose of the 'text-decoration' property in CSS?",
+      options: ["A. To control the text size", "B. To control the text alignment", "C. To control the text color", "D. To control text decorations like underline and strikethrough"],
+      answer: "D. To control text decorations like underline and strikethrough",
+    },
+    {
+      id: 25,
+      question: "Which CSS property is used to control the order of flex items in a flex container?",
+      options: ["A. order", "B. flex-order", "C. item-order", "D. flex-item"],
+      answer: "A. order",
+    },
+    {
+      id: 26,
+      question: "How do you select all <p> elements within a <div> with the class 'container'?",
+      options: ["A. div.p", "B. .container > p", "C. .container p", "D. div.container p"],
+      answer: "C. .container p",
+    },
+    {
+      id: 27,
+      question: "Which CSS property is used to control the direction of the text?",
+      options: ["A. text-direction", "B. direction", "C. text-align", "D. text-flow"],
+      answer: "B. direction",
+    },
+    {
+      id: 28,
+      question: "What is the purpose of the 'box-shadow' property in CSS?",
+      options: ["A. To add a border to an element", "B. To create a shadow around an element", "C. To change the font size", "D. To control the visibility of an element"],
+      answer: "B. To create a shadow around an element",
+    },
+    {
+      id: 29,
+      question: "Which CSS property is used to set the width of an element's border?",
+      options: ["A. border-size", "B. border-width", "C. border-style", "D. border-color"],
+      answer: "B. border-width",
+    },
+    {
+      id: 30,
+      question: "What is the purpose of the 'transition' property in CSS?",
+      options: ["A. To change the font size", "B. To create animation effects when changing CSS properties", "C. To control the text alignment", "D. To control the visibility of an element"],
+      answer: "B. To create animation effects when changing CSS properties",
+    }
+  ];
+  
+  
+export default questions  
